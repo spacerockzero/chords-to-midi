@@ -1,0 +1,16 @@
+{
+  "name": "chords-to-midi-song",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "scribbletune": "^3.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jakob Anderson <janderson@familysearch.org> (https://jakobanderson.com)",
+  "license": "MIT"
+}
