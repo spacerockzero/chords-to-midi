@@ -1,7 +1,8 @@
 const fs = require('fs').promises
 const Note = require('@tonaljs/note')
 
-const base = '/Users/jakob/Google Drive/song-writer/generated/synthwave/'
+// const base = '/Users/jakob/Google Drive/song-writer/generated/synthwave/'
+const base = ''
 // const file = 'chords-20200414_015109.txt'
 
 function uniq(a) {
