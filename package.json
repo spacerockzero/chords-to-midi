@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@tonaljs/note": "^3.5.0",
+    "@tonaljs/tonal": "^3.6.0",
     "scribbletune": "^3.5.3"
   },
   "devDependencies": {},

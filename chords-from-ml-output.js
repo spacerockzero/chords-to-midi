@@ -1,16 +1,17 @@
 const fs = require('fs').promises
 const Note = require('@tonaljs/note')
 
-const base = '/Users/jakob/Google Drive/song-writer/generated/synthwave/'
+// const base = '/Users/jakob/Google Drive/song-writer/generated/synthwave/'
+const base = 'extracted-chords/'
 // const file = 'chords-20200414_015109.txt'
 
 function uniq(a) {
-  return a.sort().filter(function(item, pos, ary) {
-      return !pos || item != ary[pos - 1];
+  return a.sort().filter(function (item, pos, ary) {
+    return !pos || item != ary[pos - 1];
   })
 }
 
-async function getMLChords(file){
+async function getMLChords(file) {
   return fs.readFile(base + file, 'utf8')
     .then(data => {
       // clean all symbols out
@@ -18,7 +19,7 @@ async function getMLChords(file){
       // console.log('cleaned:', cleaned)
       let songs = cleaned.split('Chords')
       songs = songs.map(song => song.split(' ')
-      .filter(note => Boolean(Note.get(note).name)).join(' ')
+        .filter(note => Boolean(Note.get(note).name)).join(' ')
       )
       songs = uniq(songs)
       console.log('songs.length', songs.length)
