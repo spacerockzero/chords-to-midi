@@ -1,5 +1,5 @@
 // scribbletune docs main demo
-// const scribble = require('scribbletune');
+const scribble = require('scribbletune');
 // const clips = ['1032', '2032', '4021', '3052'].map(order =>
 //   scribble.clip({
 //     pattern: '[xx][xR]'.repeat(4),
@@ -13,7 +13,7 @@
 // );
 // scribble.midi([].concat(...clips), 'chords.mid');
 
-const theNotes = 'E Abm Ab Gb Db B Bb Ebm'
+// const theNotes = 'E Abm Ab Gb Db B Bb Ebm'
 
 const { chord, clip, midi, arp } = require('scribbletune');
 const fs = require('fs').promises
@@ -54,6 +54,18 @@ async function makeMidiParts(myNotes, dir){
     pattern: 'xxxx'.repeat(notesArr.length*2),
     subdiv: '8n'
   });
+  // const arpClips = ['10321032', '20322032', '40214021', '30523052'].map(order =>
+  //     scribble.clip({
+  //       pattern: '[xx][xR]'.repeat(4),
+  //       notes: scribble.arp({
+  //         // chords: 'Dm BbM Am FM BbM FM CM Gm',
+  //         chords: myNotes,
+  //         count: 8,
+  //         order,
+  //       }),
+  //       accent: 'x-xx--xx',
+  //     })
+  //   );
 
   // synth-bass
   const rep = 6
@@ -74,6 +86,6 @@ async function makeMidiParts(myNotes, dir){
   return
 }
 
-makeMidiParts(theNotes).then()
+// makeMidiParts(theNotes).then()
 
 module.exports = { makeMidiParts }
